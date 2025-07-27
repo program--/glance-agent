@@ -2,9 +2,10 @@ module github.com/program--/glance-agent
 
 go 1.24.4
 
+require github.com/glanceapp/glance v0.8.4
+
 require (
 	github.com/ebitengine/purego v0.8.4 // indirect
-	github.com/glanceapp/glance v0.8.4 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
 	github.com/lufia/plan9stats v0.0.0-20250317134145-8bc96cf8fc35 // indirect
 	github.com/power-devops/perfstat v0.0.0-20240221224432-82ca36839d55 // indirect
