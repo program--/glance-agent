@@ -1,0 +1,30 @@
+# Based on glanceapp/glance .goreleaser.yaml
+project_name: program--/glance-agent
+
+builds:
+  - binary: glance-agent
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - openbsd
+      - freebsd
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+      - arm64
+      - "386"
+    goarm:
+      - "7"
+    ldflags:
+      - "-s -w"
+
+archives:
+  - name_template: "glance-agent-{{ .Os }}-{{ .Arch }}{{ with .Arm }}v{{ . }}{{ end }}"
+    files:
+      - nothing*
+    format_overrides:
+      - goos: windows
+        format: zip
