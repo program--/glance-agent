@@ -23,8 +23,8 @@ builds:
 
 archives:
   - name_template: "glance-agent-{{ .Os }}-{{ .Arch }}{{ with .Arm }}v{{ . }}{{ end }}"
-    files:
-      - nothing*
+    files: []
     format_overrides:
       - goos: windows
-        format: zip
+        formats: zip
+    allow_different_binary_count: true
